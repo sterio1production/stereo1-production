@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="s1wave" x1="32" y1="8" x2="32" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#c9ecff"/>
+      <stop offset="0.45" stop-color="#4da6e0"/>
+      <stop offset="1" stop-color="#1b5f9e"/>
+    </linearGradient>
+    <linearGradient id="s1plate" x1="32" y1="0" x2="32" y2="64" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2b333b"/>
+      <stop offset="1" stop-color="#0f1317"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#s1plate)"/>
+  <rect x="0.75" y="0.75" width="62.5" height="62.5" rx="13.25" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="1.5"/>
+  <g stroke="url(#s1wave)" stroke-width="5" stroke-linecap="round">
+    <line x1="14" y1="26" x2="14" y2="38"/>
+    <line x1="23" y1="18" x2="23" y2="46"/>
+    <line x1="32" y1="10" x2="32" y2="54"/>
+    <line x1="41" y1="18" x2="41" y2="46"/>
+    <line x1="50" y1="26" x2="50" y2="38"/>
+  </g>
+</svg>

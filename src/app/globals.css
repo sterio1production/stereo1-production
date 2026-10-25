@@ -1,0 +1,264 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-brand: var(--brand);
+  --color-brand-strong: var(--brand-strong);
+  --color-brand-soft: var(--brand-soft);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+/*
+  Stereo 1 Production: chrome + electric blue "stage" theme.
+  Near-black venue darkness, silver chrome highlights and the logo's
+  azure blue as the single accent color.
+*/
+:root {
+  --radius: 0.75rem;
+  --background: oklch(0.145 0.005 255);
+  --foreground: oklch(0.97 0.003 240);
+  --card: oklch(0.19 0.008 255);
+  --card-foreground: oklch(0.97 0.003 240);
+  --popover: oklch(0.18 0.008 255);
+  --popover-foreground: oklch(0.97 0.003 240);
+  --primary: oklch(0.49 0.14 252);
+  --primary-foreground: oklch(0.99 0.002 240);
+  --secondary: oklch(0.25 0.01 255);
+  --secondary-foreground: oklch(0.97 0.003 240);
+  --muted: oklch(0.235 0.008 255);
+  --muted-foreground: oklch(0.71 0.012 245);
+  --accent: oklch(0.255 0.012 255);
+  --accent-foreground: oklch(0.97 0.003 240);
+  --destructive: oklch(0.62 0.2 25);
+  --border: oklch(0.985 0 0 / 10%);
+  --input: oklch(0.985 0 0 / 14%);
+  --ring: oklch(0.73 0.12 235);
+  --brand: oklch(0.73 0.12 235);
+  --brand-strong: oklch(0.55 0.15 250);
+  --brand-soft: oklch(0.87 0.075 220);
+  --chart-1: oklch(0.73 0.12 235);
+  --chart-2: oklch(0.55 0.15 250);
+  --chart-3: oklch(0.87 0.075 220);
+  --chart-4: oklch(0.62 0.13 265);
+  --chart-5: oklch(0.68 0.11 205);
+  --sidebar: oklch(0.19 0.008 255);
+  --sidebar-foreground: oklch(0.97 0.003 240);
+  --sidebar-primary: oklch(0.49 0.14 252);
+  --sidebar-primary-foreground: oklch(0.99 0.002 240);
+  --sidebar-accent: oklch(0.25 0.01 255);
+  --sidebar-accent-foreground: oklch(0.97 0.003 240);
+  --sidebar-border: oklch(0.985 0 0 / 10%);
+  --sidebar-ring: oklch(0.73 0.12 235);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  ::selection {
+    background: var(--brand);
+    color: oklch(0.17 0.02 255);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display), system-ui, sans-serif;
+  }
+  /* Chrome bevel for key elements */
+  .glow-brand {
+    box-shadow:
+      0 0 24px oklch(0.73 0.12 235 / 0.38),
+      0 0 64px oklch(0.73 0.12 235 / 0.14),
+      inset 0 1px 0 oklch(0.99 0 0 / 0.22);
+  }
+  .text-glow {
+    text-shadow: 0 0 32px oklch(0.73 0.12 235 / 0.5);
+  }
+  /* Brand photo grade: unifies warm stage photos with the electric-blue identity */
+  .photo-grade {
+    isolation: isolate;
+  }
+  .photo-grade::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: oklch(0.56 0.13 250);
+    mix-blend-mode: color;
+    opacity: 0.3;
+    pointer-events: none;
+  }
+  .photo-grade img {
+    filter: saturate(0.95) contrast(1.03);
+  }
+  /* Polished chrome wordmark, like the logo lettering */
+  .text-chrome {
+    background: linear-gradient(
+      180deg,
+      #f8fafc 0%,
+      #dbe3ea 28%,
+      #9aa7b4 50%,
+      #f1f5f9 62%,
+      #7e8b98 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  /* Faint carbon checker, like the logo backdrop */
+  .bg-texture {
+    background-image:
+      linear-gradient(45deg, oklch(0.985 0 0 / 2.5%) 25%, transparent 25%, transparent 75%, oklch(0.985 0 0 / 2.5%) 75%),
+      linear-gradient(45deg, oklch(0.985 0 0 / 2.5%) 25%, transparent 25%, transparent 75%, oklch(0.985 0 0 / 2.5%) 75%);
+    background-size: 22px 22px;
+    background-position: 0 0, 11px 11px;
+  }
+}
+
+/* ---------- Animated equalizer bars ---------- */
+@keyframes eq-bounce {
+  0%,
+  100% {
+    transform: scaleY(0.18);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.eq-bar {
+  transform-origin: bottom;
+  animation: eq-bounce var(--eq-dur, 1.1s) ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Hovering the equalizer raises the energy: faster, hotter bars */
+.eq-interactive[data-energy="grooving"] .eq-bar {
+  animation-duration: calc(var(--eq-dur, 1.1s) * 0.45);
+}
+
+.eq-interactive[data-energy="grooving"] {
+  filter: drop-shadow(0 0 18px oklch(0.795 0.16 70 / 0.35));
+  transition: filter 0.3s ease;
+}
+
+/* Click: a beat-drop wave runs across the bars once */
+@keyframes eq-drop-wave {
+  0% {
+    transform: scaleY(0.12);
+  }
+  22% {
+    transform: scaleY(1.06);
+  }
+  55% {
+    transform: scaleY(0.3);
+  }
+  100% {
+    transform: scaleY(0.18);
+  }
+}
+
+.eq-interactive[data-drop="true"] .eq-bar {
+  animation: eq-drop-wave 0.85s cubic-bezier(0.22, 1, 0.36, 1) 1;
+}
+
+/* Slow rotating conic "spotlight sweep" for hero */
+@keyframes spotlight-sweep {
+  0% {
+    transform: translateX(-18%) rotate(-8deg);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateX(18%) rotate(8deg);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateX(-18%) rotate(-8deg);
+    opacity: 0.5;
+  }
+}
+
+.spotlight-sweep {
+  animation: spotlight-sweep 9s ease-in-out infinite;
+}
+
+/* Gentle pulse for the "live" dot */
+@keyframes live-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 oklch(0.73 0.12 235 / 0.55);
+  }
+  70% {
+    box-shadow: 0 0 0 8px oklch(0.73 0.12 235 / 0);
+  }
+}
+
+.live-dot {
+  animation: live-pulse 1.8s ease-out infinite;
+}
+
+/* ---------- Reduced motion: stillness is the default experience ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .eq-bar,
+  .spotlight-sweep,
+  .live-dot {
+    animation: none !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ---------- Slim brand scrollbar ---------- */
+@supports (scrollbar-width: thin) {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: oklch(0.73 0.12 235 / 0.45) transparent;
+  }
+}
