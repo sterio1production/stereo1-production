@@ -30,12 +30,12 @@ export function Events() {
       {/* subtle stage glow on the section */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 top-0 h-full bg-[radial-gradient(ellipse_at_bottom,oklch(0.73_0.12_235/0.07),transparent_60%)]"
+        className="pointer-events-none absolute inset-x-0 top-0 h-full bg-[radial-gradient(ellipse_at_bottom,rgba(56,189,248,0.07),transparent_60%)]"
       />
       <div className="relative mx-auto w-full max-w-6xl px-4 sm:px-6">
         <SectionHeading
           eyebrow="Events we cover"
-          title="Big stage or small room"
+          title={<>Big stage or <span className="grad-text">small room</span></>}
           description="From a packed concert to a quiet corporate briefing, we set up the right gear for the occasion. Pick yours to see what we would bring."
         />
 
@@ -65,7 +65,7 @@ export function Events() {
                   className={cn(
                     "group flex min-w-[11rem] shrink-0 snap-start items-center gap-3.5 rounded-2xl border px-4 py-4 text-left transition-all duration-300 active:scale-[0.98] lg:min-w-0",
                     selected
-                      ? "border-brand/60 bg-brand/10 shadow-[0_0_24px_-6px_oklch(0.73_0.12_235/0.4)]"
+                      ? "border-brand/60 bg-brand/10 shadow-[0_0_24px_-6px_rgba(37,99,235,0.4)]"
                       : "border-border bg-card/70 hover:-translate-y-0.5 hover:border-brand/40 hover:bg-card"
                   )}
                 >
@@ -97,7 +97,7 @@ export function Events() {
             <div className="relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card p-6 sm:p-8">
               <div
                 aria-hidden="true"
-                className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-[radial-gradient(ellipse_at_top,oklch(0.73_0.12_235/0.14),transparent_70%)]"
+                className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-[radial-gradient(ellipse_at_top,rgba(56,189,248,0.14),transparent_70%)]"
               />
               <AnimatePresence mode="wait">
                 <motion.div
@@ -134,7 +134,7 @@ export function Events() {
                     <button
                       type="button"
                       onClick={planThis}
-                      className="glow-brand inline-flex h-11 items-center justify-center gap-2 rounded-xl bg-primary px-5 font-display text-sm font-bold text-primary-foreground transition-transform active:scale-[0.98]"
+                      className="glow-brand inline-flex h-11 items-center justify-center gap-2 rounded-xl bg-[linear-gradient(100deg,#2563eb_0%,#1d4ed8_100%)] px-5 font-display text-sm font-bold text-primary-foreground transition-transform active:scale-[0.98]"
                     >
                       Plan this event
                       <ArrowRight className="h-4 w-4" aria-hidden="true" />

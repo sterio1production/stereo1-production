@@ -81,7 +81,7 @@ export function Navbar() {
                 {isActive && (
                   <motion.span
                     layoutId="nav-underline"
-                    className="absolute inset-x-3.5 -bottom-0.5 h-0.5 rounded-full bg-brand"
+                    className="absolute inset-x-3.5 -bottom-0.5 h-0.5 rounded-full bg-[linear-gradient(100deg,#2563eb,#38bdf8)]"
                     transition={{ type: "spring", stiffness: 380, damping: 32 }}
                   />
                 )}

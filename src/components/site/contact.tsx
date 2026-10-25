@@ -180,12 +180,12 @@ export function Contact() {
     <section id="contact" className="relative py-20 sm:py-28">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-full bg-[radial-gradient(ellipse_at_top,oklch(0.73_0.12_235/0.08),transparent_55%)]"
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-full bg-[radial-gradient(ellipse_at_top,rgba(56,189,248,0.08),transparent_55%)]"
       />
       <div className="relative mx-auto w-full max-w-6xl px-4 sm:px-6">
         <SectionHeading
           eyebrow="Get in touch"
-          title="Build your quote in a minute"
+          title={<>Build your quote <span className="grad-text">in a minute</span></>}
           description="Pick your event, tap the gear you need, leave your details. We pick it up on WhatsApp, or you can call us straight away."
         />
 

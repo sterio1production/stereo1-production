@@ -23,7 +23,7 @@ export function HowItWorks() {
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
         <SectionHeading
           eyebrow="How it works"
-          title="Three steps, zero stress"
+          title={<>Three steps, <span className="grad-text">zero stress</span></>}
           description="Booking event production should be the easiest part of planning your day. Tap through the journey."
         />
 

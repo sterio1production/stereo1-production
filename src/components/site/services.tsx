@@ -31,7 +31,7 @@ export function Services() {
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
         <SectionHeading
           eyebrow="What we do"
-          title="Everything your event needs"
+          title={<>Everything your event <span className="grad-text">needs</span></>}
           description="One team to bring the equipment, set it up, run it and pack it away, so you can focus on your guests. Open a card for details, then add what you need straight to your quote."
         />
 
@@ -51,7 +51,7 @@ export function Services() {
                   ease: [0.22, 1, 0.36, 1],
                 }}
                 className={cn(
-                  "group relative flex flex-col overflow-hidden rounded-2xl border bg-card transition-all duration-300 hover:-translate-y-1 hover:border-brand/50 hover:shadow-[0_8px_40px_-8px_oklch(0.73_0.12_235/0.28)]",
+                  "group relative flex flex-col overflow-hidden rounded-2xl border bg-card transition-all duration-300 hover:-translate-y-1 hover:border-brand/50 hover:shadow-[0_8px_40px_-8px_rgba(37,99,235,0.28)]",
                   selected ? "border-brand/60" : "border-border"
                 )}
               >

@@ -10,7 +10,7 @@ export function WhyUs() {
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
         <SectionHeading
           eyebrow="Why Stereo 1"
-          title="Built around your event"
+          title={<>Built around <span className="grad-text">your event</span></>}
           description="Booking event production should be the easiest part of planning your day. We keep it simple, clear and personal."
         />
 

@@ -13,27 +13,31 @@ accent, chrome wordmark moments, and photos graded to sit in the same light.
 
 ## Palette
 
-Values are authored in `oklch()` (Tailwind v4 theme tokens); hex is the rendered
-equivalent for quick reference.
+Values are authored as hex/rgba in `src/app/globals.css`, taken from the brand
+reference file; the hex values below are the source of truth.
 
-| Token | oklch | hex | Use |
-|---|---|---|---|
-| `--background` | `oklch(0.145 0.005 255)` | `#090a0c` | page base |
-| `--card` | `oklch(0.19 0.008 255)` | `#111417` | cards, panels |
-| `--secondary` | `oklch(0.25 0.01 255)` | `#1e2226` | subtle fills |
-| `--foreground` | `oklch(0.97 0.003 240)` | `#f3f5f7` | body text |
-| `--muted-foreground` | `oklch(0.71 0.012 245)` | `#9ca2a9` | secondary text |
-| `--brand` | `oklch(0.73 0.12 235)` | `#50b3e8` | accent text, icons, glow |
-| `--brand-strong` | `oklch(0.55 0.15 250)` | `#0f74c5` | gradients, deep accents |
-| `--brand-soft` | `oklch(0.87 0.075 220)` | `#9ce0f7` | highlights, EQ tips |
-| `--primary` | `oklch(0.49 0.14 252)` | `#0d61ac` | buttons (white text, AA) |
+| Token | Value | Use |
+|---|---|---|
+| `--background` | `#060b16` | page base (deep navy) |
+| `--card` | `#0b1220` | cards, panels |
+| `--secondary` | `#131d31` | subtle fills |
+| `--foreground` | `#e7edf7` | body text |
+| `--muted-foreground` | `#94a3b8` | secondary text |
+| `--brand` | `#38bdf8` | accent text, icons, EQ tips |
+| `--brand-strong` / `--primary` | `#2563eb` | buttons, deep accents |
+| `--brand-soft` | `#7dd3fc` | highlights |
+| accent gradient | `100deg, #2563eb → #38bdf8` | headline words, buttons, underline, EQ |
+| photo grade | `#1d4ed8` at 30%, `mix-blend-mode: color` | unifies imagery |
+
+A fixed body overlay carries the brand atmosphere: three radial glows (royal
+blue 16% top-right, sky 7% left, blue 10% bottom) over the navy base.
 
 Logo gradient stops used in the mark/favicon: `#c9ecff` → `#4da6e0` → `#1b5f9e`.
 Chrome gradient for the wordmark: `#f8fafc` → `#dbe3ea` → `#9aa7b4` → `#f1f5f9`
 → `#7e8b98`.
 
-Accent is used at one strength only; deep blue is reserved for surfaces that
-carry white text so contrast stays at AA.
+Buttons end their gradient on `#1d4ed8` rather than sky so white labels keep AA
+contrast; the sky end of the gradient is reserved for text, icons and glows.
 
 ## Typography
 

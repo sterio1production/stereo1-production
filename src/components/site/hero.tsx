@@ -70,7 +70,7 @@ export function Hero() {
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/60 to-background" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_100%,oklch(0.55_0.15_250/0.22),transparent_58%)] mix-blend-screen" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_100%,rgba(37,99,235,0.25),transparent_58%)] mix-blend-screen" />
       </div>
 
       {/* Stage lighting effects */}
@@ -78,14 +78,14 @@ export function Hero() {
         aria-hidden="true"
         className="pointer-events-none absolute inset-0"
       >
-        <div className="absolute left-1/2 top-[-30%] h-[70vh] w-[90vw] -translate-x-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,oklch(0.73_0.12_235/0.16),transparent_65%)] blur-2xl" />
+        <div className="absolute left-1/2 top-[-30%] h-[70vh] w-[90vw] -translate-x-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(56,189,248,0.16),transparent_65%)] blur-2xl" />
         {finePointer && !reduce ? (
           <motion.div
-            className="absolute h-[34rem] w-[34rem] rounded-full bg-[radial-gradient(circle_at_center,oklch(0.87_0.075_220/0.22),oklch(0.73_0.12_235/0.10)_40%,transparent_70%)] mix-blend-screen blur-2xl"
+            className="absolute h-[34rem] w-[34rem] rounded-full bg-[radial-gradient(circle_at_center,rgba(125,211,252,0.22),rgba(56,189,248,0.10)_40%,transparent_70%)] mix-blend-screen blur-2xl"
             style={{ left: spotX, top: spotY, x: "-50%", y: "-50%" }}
           />
         ) : (
-          <div className="spotlight-sweep absolute left-1/2 top-[-20%] h-[60vh] w-[55vw] -translate-x-1/2 rounded-full bg-[conic-gradient(from_180deg_at_50%_0%,transparent_40%,oklch(0.73_0.12_235/0.10)_50%,transparent_60%)] blur-3xl" />
+          <div className="spotlight-sweep absolute left-1/2 top-[-20%] h-[60vh] w-[55vw] -translate-x-1/2 rounded-full bg-[conic-gradient(from_180deg_at_50%_0%,transparent_40%,rgba(56,189,248,0.10)_50%,transparent_60%)] blur-3xl" />
         )}
       </div>
 
@@ -105,7 +105,7 @@ export function Hero() {
           className="mt-6 max-w-4xl font-display text-5xl font-black leading-[1.02] tracking-tight text-foreground sm:text-6xl md:text-7xl"
         >
           Make your event{" "}
-          <span className="text-glow text-brand">sound unforgettable</span>
+          <span className="grad-text">sound unforgettable</span>
         </motion.h1>
 
         <motion.p

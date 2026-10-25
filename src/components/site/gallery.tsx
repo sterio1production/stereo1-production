@@ -12,7 +12,7 @@ export function Gallery() {
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
         <SectionHeading
           eyebrow="The rig"
-          title="From setup to showtime"
+          title={<>From setup to <span className="grad-text">showtime</span></>}
           description="The gear we bring and run: line arrays tuned to the room, moving heads operated live, stages built to fit, and a clean mix for the stream."
         />
 

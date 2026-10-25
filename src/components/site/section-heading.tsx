@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import type { ReactNode } from "react";
 
 export function SectionHeading({
   eyebrow,
@@ -10,7 +11,7 @@ export function SectionHeading({
   align = "center",
 }: {
   eyebrow: string;
-  title: string;
+  title: ReactNode;
   description?: string;
   align?: "center" | "left";
 }) {

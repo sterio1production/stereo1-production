@@ -29,7 +29,7 @@ export function WhatsAppFab() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Chat with us on WhatsApp"
-          className="glow-brand fixed bottom-5 right-5 z-40 flex h-13 w-13 items-center justify-center rounded-full bg-primary p-3.5 text-primary-foreground transition-transform hover:scale-105 sm:bottom-7 sm:right-7"
+          className="glow-brand fixed bottom-5 right-5 z-40 flex h-13 w-13 items-center justify-center rounded-full bg-[linear-gradient(100deg,#2563eb_0%,#1d4ed8_100%)] p-3.5 text-primary-foreground transition-transform hover:scale-105 sm:bottom-7 sm:right-7"
         >
           <MessageCircle className="h-6 w-6" aria-hidden="true" />
         </motion.a>
